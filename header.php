@@ -5,10 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
 
 <header>
     <nav>
-        <?php wp_nav_menu(array('theme_location'=>'primary')); ?>
+        <?php
+        wp_nav_menu(array(
+            'theme_location' => 'primary', // Lidh me menu kryesore
+            'container' => false,
+            'menu_class' => 'main-menu'
+        ));
+        ?>
     </nav>
 </header>
