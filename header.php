@@ -9,13 +9,19 @@
 <body <?php body_class(); ?>>
 
 <header>
-    <nav>
-        <?php
-        wp_nav_menu(array(
-            'theme_location' => 'primary', // Lidh me menu kryesore
-            'container' => false,
-            'menu_class' => 'main-menu'
-        ));
-        ?>
-    </nav>
+    <div class="header-container">
+        <h1 class="site-title">
+            <a href="<?php echo site_url('/'); ?>">Hotel Aurora</a>
+        </h1>
+
+        <nav>
+            <?php
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container' => false,
+                'menu_class' => 'main-menu'
+            ));
+            ?>
+        </nav>
+    </div>
 </header>
